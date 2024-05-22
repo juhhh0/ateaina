@@ -5,3 +5,11 @@ export type Work = {
     url: string;
   };
 };
+
+export type Expertise = {
+  title: string;
+  description: string;
+  cover: {
+    url: string;
+  };
+};

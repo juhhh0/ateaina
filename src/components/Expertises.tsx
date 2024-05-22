@@ -1,13 +1,6 @@
 import { getStrapiURL } from "@/lib/utils";
 import React from "react";
-
-type Expertise = {
-  title: string;
-  description: string;
-  cover: {
-    url: string;
-  };
-};
+import { Expertise } from "@/lib/types";
 
 export default function Expertises({ data }: { data: any }) {
   const strapiUrl = getStrapiURL();
