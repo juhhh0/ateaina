@@ -49,7 +49,7 @@ export default function Slick({data}: {data: PictureType[]}) {
     <Slider {...settings} className="max-width">
       {data?.map((picture: PictureType, i: number) => (
         <div key={i}>
-          <img className="max-w-full aspect-video object-cover h-full" src={strapiUrl + picture.url} alt="" />
+          <img className="aspect-video object-cover" src={strapiUrl + picture.url} alt="" />
         </div>
       ))}
     </Slider>
