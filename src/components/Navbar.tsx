@@ -36,23 +36,20 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-20 px-4 h-16 flex items-center justify-between transition-colors ${
+      className={`fixed top-0 w-full z-20 px-8 h-16 flex items-center justify-between transition-colors ${
         isScrolled ? "bg-black" : "bg-transparent"
       }`}
     >
       <Link href="/">
         <Image
-          src="/logo.svg"
-          alt="Vercel Logo"
-          width={120}
-          height={60}
+          src="/images/logo-small.svg"
+          alt="Ateaina Logo"
+          width={30}
+          height={30}
           priority
         />
       </Link>
       <ul className="hidden md:flex gap-4 uppercase">{renderLinks()}</ul>
-      <Link className="hidden md:flex" href="www.youtube.com">
-        Va check notre docu !
-      </Link>
       <span
         className={`md:hidden z-20 uppercase`}
         onClick={() => {
@@ -72,10 +69,6 @@ const MobileMenu = () => {
       <ul className="flex flex-col gap-4 items-center text-2xl uppercase">
         {renderLinks()}
       </ul>
-
-      <Link className="mt-10" href="www.youtube.com">
-        Va check notre docu !
-      </Link>
     </div>
   );
 };
