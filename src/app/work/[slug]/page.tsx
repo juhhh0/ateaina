@@ -20,10 +20,10 @@ export default async function Page({ params }: { params: { slug: string } }) {
       >
         <div className="absolute opacity-50 bg-black h-full w-full"></div>
         <div className="absolute h-full w-full flex flex-col justify-center items-center">
-          <h2 className="mx-auto text-8xl">{data.title}</h2>
+          <h2 className="mx-auto text-center text-6xl md:text-8xl">{data.title}</h2>
         </div>
       </section>
-      <section className="max-width py-16 px-8 xl:px-0">
+      <section className="max-width py-16 px-4 xl:px-0">
         <div className="flex flex-wrap gap-4">
           {data.expertise.data &&
             data.expertise.data.map((expertise: ExpertiseType, i: number) => (
@@ -32,14 +32,14 @@ export default async function Page({ params }: { params: { slug: string } }) {
               </span>
             ))}
         </div>
-        <h2 className="text-7xl font-bold py-6">
+        <h2 className="text-6xl font-bold py-6">
           {data.name} - {data.title}
         </h2>
         <p className="text-2xl opacity-75">{data.subtitle}</p>
         <p>{data.description}</p>
       </section>
       <Slick data={data.pictures.data} />
-      <section className="max-width py-16 px-8 xl:px-0">
+      <section className="max-width py-16 px-4 xl:px-0">
         <p className="text-2xl">Regardez dès maintenant les épisodes:</p>
         <ul className="pt-6 flex flex-col gap-4">
           {data.Episodes &&
@@ -50,7 +50,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
             ))}
         </ul>
       </section>
-      <div className="max-width flex gap-2 items-center justify-end py-16 px-8 xl:px-0">
+      <div className="max-width flex gap-2 items-center justify-end py-16 px-4 xl:px-0">
         <span>Next Work</span>
         <img src="/icons/arrow.svg" alt="" />
       </div>
