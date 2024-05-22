@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { M_PLUS_1 } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const mplus = M_PLUS_1({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={mplus.className}>
         <Navbar />
         {children}
+        <Footer/>
       </body>
     </html>
   );

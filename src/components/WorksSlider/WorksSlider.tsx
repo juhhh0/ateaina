@@ -4,8 +4,8 @@ import "./WorksSlider.css";
 
 export default function WorksSlider() {
   return (
-    <section className="px-4">
-      <h3 className="display text-5xl pb-5">Découvrez</h3>
+    <section className="">
+      <h3 className="display text-5xl pb-5 px-4">Découvrez</h3>
       <div className="pb-32s overflow-hidden">
         <div className="works-slider-inner whitespace-nowrap w-max">
           <WorkCard img="/images/basket.jpg" title="USBD Drancy" />
