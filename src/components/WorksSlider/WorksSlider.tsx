@@ -1,6 +1,5 @@
 import React from "react";
 import WorkCard from "./WorkCard";
-import "./WorksSlider.css";
 import { getWorks } from "@/data/loaders";
 import { getStrapiURL } from "@/lib/utils";
 import { Work } from "@/lib/types";

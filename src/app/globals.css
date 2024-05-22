@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("../components/WorksSlider/WorksSlider.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
