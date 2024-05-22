@@ -11,7 +11,6 @@ export default async function WorksSlider() {
 
   return (
     <section className="">
-      <h3 className="display text-5xl pb-5 px-4">Découvrez</h3>
       <div className="pb-32s overflow-hidden">
         <div className="works-slider-inner whitespace-nowrap w-max">
           {data.map((work: Work, i: number) => (
