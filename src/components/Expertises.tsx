@@ -18,7 +18,7 @@ export default function Expertises({ data }: { data: ExpertiseType[] }) {
             </h3>
             <div className="flex flex-col md:flex-row justify-between items-center gap-12">
               <img
-                className="h-96"
+                className="md:h-96 h-60 aspect-video md:aspect-auto object-cover"
                 src={strapiUrl + expertise.cover.url}
                 alt=""
               />
