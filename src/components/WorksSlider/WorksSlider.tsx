@@ -9,7 +9,7 @@ export default async function WorksSlider() {
   const strapiUrl = getStrapiURL();
 
   return (
-    <section className="">
+    <section>
       <div className="pb-32s overflow-hidden">
         <div className="works-slider-inner whitespace-nowrap w-max">
           {data.map((work: Work, i: number) => (

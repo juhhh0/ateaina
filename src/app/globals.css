@@ -10,6 +10,15 @@ body {
   color: white;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+
+.max-width{
+  @apply max-w-7xl mx-auto;
+}
+
 .hero video::-webkit-media-controls-panel {
   display: none !important;
   opacity: 1 !important;

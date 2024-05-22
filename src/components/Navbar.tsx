@@ -40,25 +40,29 @@ export default function Navbar() {
         isScrolled ? "bg-black" : "bg-transparent"
       }`}
     >
-      <Link href="/">
-        <Image
-          src="/images/logo-small.svg"
-          alt="Ateaina Logo"
-          width={30}
-          height={30}
-          priority
-        />
-      </Link>
-      <ul className="hidden md:flex gap-4 uppercase">{renderLinks()}</ul>
-      <span
-        className={`md:hidden z-20 uppercase`}
-        onClick={() => {
-          setOpen(!open);
-        }}
-      >
-        {open ? "Fermer" : "Menu"}
-      </span>
-      {open && <MobileMenu />}
+      <div className="max-width w-full flex items-center justify-between">
+        <Link href="/">
+          <Image
+            src="/images/logo-small.svg"
+            alt="Ateaina Logo"
+            width={30}
+            height={30}
+            priority
+          />
+        </Link>
+        <ul className="hidden md:flex gap-4 uppercase font-bold">
+          {renderLinks()}
+        </ul>
+        <span
+          className={`md:hidden z-20 uppercase font-medium`}
+          onClick={() => {
+            setOpen(!open);
+          }}
+        >
+          {open ? "Fermer" : "Menu"}
+        </span>
+        {open && <MobileMenu />}
+      </div>
     </nav>
   );
 }
@@ -66,7 +70,7 @@ export default function Navbar() {
 const MobileMenu = () => {
   return (
     <div className="fixed flex flex-col items-center justify-center w-screen left-0 top-0 h-screen backdrop-brightness-[0.1]">
-      <ul className="flex flex-col gap-4 items-center text-2xl uppercase">
+      <ul className="flex flex-col gap-4 items-center text-2xl uppercase font-bold">
         {renderLinks()}
       </ul>
     </div>

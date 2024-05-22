@@ -19,7 +19,7 @@ export default function TextEffect({text}: {text: string}) {
 
   return (
     <p
-      className="py-20 md:py-44 px-4 flex flex-wrap text-[30px] md:text-[50px] font-medium leading-none"
+      className="max-width py-20 md:py-44 px-8 xl:px-0 flex flex-wrap text-[30px] md:text-[50px] font-medium leading-none"
       ref={element}
     >
       {words.map((word, i) => {

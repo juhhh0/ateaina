@@ -4,14 +4,14 @@ import { getStrapiURL } from "@/lib/utils";
 import React from "react";
 
 export default async function page() {
-  
+
   const { data } = await getWorks();
   const strapiUrl = getStrapiURL();
 
   return (
     <main className="pt-24">
-      <h1 className="px-8 display text-5xl">Works</h1>
-      <section className="flex flex-wrap justify-center works-page">
+      <h1 className="px-8 xl:px-0 display text-5xl max-width">Works</h1>
+      <section className="flex flex-wrap justify-center works-page max-w-[1350px] mx-auto">
       {data.map((work: any, i: number) => (
           <WorkCard
           key={i}
