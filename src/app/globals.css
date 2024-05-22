@@ -31,3 +31,7 @@ body {
 .display {
   font-family: "Bebas Neue", sans-serif;
 }
+
+h2{
+  @apply text-5xl display
+}

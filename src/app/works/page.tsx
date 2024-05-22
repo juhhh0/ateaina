@@ -10,7 +10,7 @@ export default async function page() {
 
   return (
     <main className="pt-24">
-      <h1 className="px-8 xl:px-0 display text-5xl max-width">Works</h1>
+      <h2 className="px-8 xl:px-0 max-width">Works</h2>
       <section className="flex flex-wrap justify-center works-page max-w-[1350px] mx-auto">
       {data.map((work: any, i: number) => (
           <WorkCard
