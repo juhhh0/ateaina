@@ -13,6 +13,13 @@ async function fetchData(url: string) {
   }
 }
 
+export async function getWork(slug: string) {
+  const url = baseUrl + "/api/works?populate=*&filters[slug][$eq]=" + slug;
+  const data = await fetchData(url);
+
+  return data.data[0];
+}
+
 export async function getWorks() {
   const url = baseUrl + "/api/works?populate=*";
 
@@ -41,4 +48,3 @@ export async function getNavbar() {
 
   return data;
 }
-
