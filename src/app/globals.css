@@ -1,13 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
   background-color: black;
   color: white;
 }
 
-.display{
+.hero video::-webkit-media-controls-panel {
+  display: none !important;
+  opacity: 1 !important;
+}
+
+.hero video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+
+.display {
   font-family: "Bebas Neue", sans-serif;
 }
