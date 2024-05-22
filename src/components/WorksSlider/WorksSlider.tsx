@@ -1,21 +1,25 @@
 import React from "react";
 import WorkCard from "./WorkCard";
 import "./WorksSlider.css";
+import { getWorks } from "@/data/loaders";
+import { getStrapiURL } from "@/lib/utils";
+import { Work } from "@/lib/types";
 
-export default function WorksSlider() {
+export default async function WorksSlider() {
+  const { data } = await getWorks();
+  const strapiUrl = getStrapiURL();
+
   return (
     <section className="">
       <h3 className="display text-5xl pb-5 px-4">Découvrez</h3>
       <div className="pb-32s overflow-hidden">
         <div className="works-slider-inner whitespace-nowrap w-max">
-          <WorkCard img="/images/basket.jpg" title="USBD Drancy" />
-          <WorkCard img="/images/bmx.jpg" title="Bmx Media" />
-          <WorkCard img="/images/ballerine.jpeg" title="CER Blanc Mesnil" />
-          <WorkCard img="/images/judo.jpg" title="Judo Bobigny" />
-          <WorkCard img="/images/basket.jpg" title="USBD Drancy" />
-          <WorkCard img="/images/bmx.jpg" title="Bmx Media" />
-          <WorkCard img="/images/ballerine.jpeg" title="CER Blanc Mesnil" />
-          <WorkCard img="/images/judo.jpg" title="Judo Bobigny" />
+          {data.map((work: Work, i: number) => (
+            <WorkCard key={i} img={strapiUrl + work.cover.url} title={work.title} link={work.slug} />
+          ))}
+          {data.map((work: Work, i: number) => (
+            <WorkCard key={i} img={strapiUrl + work.cover.url} title={work.title} link={work.slug} />
+          ))}
         </div>
       </div>
     </section>
