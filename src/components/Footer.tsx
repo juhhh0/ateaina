@@ -1,23 +1,34 @@
+import { getFooter } from "@/data/loaders";
+import Link from "next/link";
 import React from "react";
 
-export default function Footer() {
+export default async function Footer() {
+  const data = await getFooter();
+
   return (
-    <footer className="border-t-2 mt-10 py-5 md:px-10 ">
-      <div className="max-width flex flex-col-reverse md:flex-row justify-center items-center md:justify-between gap-5">
+    <footer className="border-t-2 mt-10 py-16 md:px-10 flex flex-col gap-12 ">
+      <div className="max-width w-full flex flex-col-reverse md:flex-row justify-center items-center md:justify-between gap-5">
         <ul className="md:flex-row font-medium flex flex-col gap-3 items-center">
-          <li>Terms & conditions</li>
-          <li>A propos</li>
-          <li>Nous contacter</li>
+          {data.Links.map((link: any, i: number) => (
+            <li key={i}>
+              <Link href={link.url}>{link.Label}</Link>
+            </li>
+          ))}
         </ul>
         <ul className="flex gap-3">
           <li>
-            <img className="w-8" src="/icons/linkedin.svg" alt="" />
+            <a href={data.Linkedin}>
+              <img className="w-8" src="/icons/linkedin.svg" alt="" />
+            </a>
           </li>
           <li>
-            <img className="w-8" src="/icons/instagram.svg" alt="" />
+            <a href={data.Instagram}>
+              <img className="w-8" src="/icons/instagram.svg" alt="" />
+            </a>
           </li>
         </ul>
       </div>
+      <p className="font-medium text-xs max-width md:w-full">© 2024 Ateaina. All Rights Reserved</p>
     </footer>
   );
 }
