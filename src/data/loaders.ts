@@ -21,7 +21,11 @@ export async function getWorks() {
 
 export async function getHomeData() {
     const url = baseUrl + "/api/home-page?populate=*";
+    const data = await fetchData(url);
+    const expertisesUrl = baseUrl + "/api/expertises?populate=*";
+    const expertises = await fetchData(expertisesUrl);
+
   
-    return await fetchData(url);
+    return {data: data, expertises: expertises };
   }
   
