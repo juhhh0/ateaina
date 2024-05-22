@@ -3,10 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import { useScroll, motion, useTransform, MotionValue } from "framer-motion";
 
-const text =
-  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum fugit perferendis modi, molestias adipisci suscipit eveniet beatae nam amet quisquam dolor inventore maiores et, tempora veniam mollitia obcaecati? Beatae, explicabo?";
-
-export default function TextEffect() {
+export default function TextEffect({text}: {text: string}) {
   const element = useRef(null);
 
   const { scrollYProgress } = useScroll({

@@ -1,12 +1,14 @@
 import HeroVideo from "@/components/HeroVideo";
 import TextEffect from "@/components/TextEffect";
 import WorksSlider from "@/components/WorksSlider/WorksSlider";
+import { getHomeData } from "@/data/loaders";
 
-export default function Home() {
+export default async function Home() {
+  const data = await getHomeData();
   return (
     <main>
       <HeroVideo/>
-      <TextEffect/>
+      <TextEffect text={data.presentation}/>
       <WorksSlider />
     </main>
     

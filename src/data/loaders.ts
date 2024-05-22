@@ -18,3 +18,10 @@ export async function getWorks() {
 
   return await fetchData(url);
 }
+
+export async function getHomeData() {
+    const url = baseUrl + "/api/home-page?populate=*";
+  
+    return await fetchData(url);
+  }
+  
