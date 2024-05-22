@@ -1,5 +1,6 @@
 import WorkCard from "@/components/WorksSlider/WorkCard";
 import { getWorks } from "@/data/loaders";
+import { WorkType } from "@/lib/types";
 import { getStrapiURL } from "@/lib/utils";
 import React from "react";
 
@@ -12,7 +13,7 @@ export default async function page() {
     <main className="pt-24">
       <h2 className="px-8 xl:px-0 max-width">Works</h2>
       <section className="flex flex-wrap justify-center works-page max-w-[1350px] mx-auto">
-      {data.map((work: any, i: number) => (
+      {data.map((work: WorkType, i: number) => (
           <WorkCard
           key={i}
           img={strapiUrl + work.cover.url}

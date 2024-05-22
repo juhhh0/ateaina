@@ -1,13 +1,13 @@
 import { getStrapiURL } from "@/lib/utils";
 import React from "react";
-import { Expertise } from "@/lib/types";
+import { ExpertiseType } from "@/lib/types";
 
-export default function Expertises({ data }: { data: any }) {
+export default function Expertises({ data }: { data: ExpertiseType[] }) {
   const strapiUrl = getStrapiURL();
 
   return (
     <section className="pb-20">
-      {data.map((expertise: Expertise, i: number) => (
+      {data.map((expertise: ExpertiseType, i: number) => (
         <article
           key={i}
           className="bg-black sticky top-[10dvh] border-t-2 py-8 px-8"

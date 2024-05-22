@@ -1,5 +1,6 @@
 import Slick from "@/components/SlickSlider";
 import { getWork } from "@/data/loaders";
+import { ExpertiseType, LinkType } from "@/lib/types";
 import { getStrapiURL } from "@/lib/utils";
 import React from "react";
 
@@ -25,7 +26,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
       <section className="max-width py-16 px-8 xl:px-0">
         <div className="flex flex-wrap gap-4">
           {data.expertise.data &&
-            data.expertise.data.map((expertise: any, i: number) => (
+            data.expertise.data.map((expertise: ExpertiseType, i: number) => (
               <span className="text-3xl font-bold text-nowrap" key={i}>
                 / {expertise.title}
               </span>
@@ -42,7 +43,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <p className="text-2xl">Regardez dès maintenant les épisodes:</p>
         <ul className="pt-6 flex flex-col gap-4">
           {data.Episodes &&
-            data.Episodes.map((episode: any, i: number) => (
+            data.Episodes.map((episode: LinkType, i: number) => (
               <li className="flex flex-col gap-2" key={i}>
                 <a href={episode.url}>{episode.Label}</a>
               </li>

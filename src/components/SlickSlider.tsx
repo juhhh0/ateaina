@@ -7,8 +7,9 @@ import React from "react";
 // @ts-ignore
 import Slider from "react-slick";
 import { getStrapiURL } from "@/lib/utils";
+import { PictureType } from "@/lib/types";
 
-export default function Slick({data}: {data: any[]}) {
+export default function Slick({data}: {data: PictureType[]}) {
   const strapiUrl = getStrapiURL();
 
   var settings = {
@@ -46,7 +47,7 @@ export default function Slick({data}: {data: any[]}) {
   };
   return (
     <Slider {...settings} className="max-width">
-      {data?.map((picture: any, i: number) => (
+      {data?.map((picture: PictureType, i: number) => (
         <div key={i}>
           <img className="max-w-full aspect-video object-cover h-full" src={strapiUrl + picture.url} alt="" />
         </div>

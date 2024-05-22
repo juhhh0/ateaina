@@ -1,12 +1,27 @@
-export type Work = {
+export type WorkType = {
   title: string;
+  name: string;
+  subtitle: string;
+  pictures: {
+    data: {
+      url: string;
+    }[];
+  };
+  Episodes: {
+    url: string;
+    Label: string;
+  }[];
   slug: string;
   cover: {
     url: string;
   };
 };
 
-export type Expertise = {
+export type PictureType = {
+  url: string;
+}
+
+export type ExpertiseType = {
   title: string;
   description: string;
   cover: {
@@ -16,7 +31,7 @@ export type Expertise = {
 
 export type NavbarType = {
   Links: LinkType[];
-}
+};
 
 export type LinkType = {
   url: string;
