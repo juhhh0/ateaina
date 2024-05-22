@@ -22,7 +22,7 @@ export default function TextEffect() {
 
   return (
     <p
-      className="py-24 px-4 flex flex-wrap text-[50px] font-medium leading-none"
+      className="py-44 px-4 flex flex-wrap text-[50px] font-medium leading-none"
       ref={element}
     >
       {words.map((word, i) => {
