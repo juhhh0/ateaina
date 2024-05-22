@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { LinkType, NavbarType } from "@/lib/types";
 
-export default function Navbar() {
+export default function Navbar({ data }: { data: NavbarType }) {
   const [open, setOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -51,7 +52,7 @@ export default function Navbar() {
           />
         </Link>
         <ul className="hidden md:flex gap-4 uppercase font-bold">
-          {renderLinks()}
+          {renderLinks(data.Links)}
         </ul>
         <span
           className={`md:hidden z-20 uppercase font-medium`}
@@ -61,34 +62,30 @@ export default function Navbar() {
         >
           {open ? "Fermer" : "Menu"}
         </span>
-        {open && <MobileMenu />}
+        {open && <MobileMenu data={data.Links} />}
       </div>
     </nav>
   );
 }
 
-const MobileMenu = () => {
+const MobileMenu = ({ data }: { data: LinkType[] }) => {
   return (
     <div className="fixed flex flex-col items-center justify-center w-screen left-0 top-0 h-screen backdrop-brightness-[0.1]">
       <ul className="flex flex-col gap-4 items-center text-2xl uppercase font-bold">
-        {renderLinks()}
+        {renderLinks(data)}
       </ul>
     </div>
   );
 };
 
-const renderLinks = () => {
+const renderLinks = (data: LinkType[]) => {
   return (
     <>
-      <li>
-        <Link href="/agency">Agency</Link>
-      </li>
-      <li>
-        <Link href="/works">Works</Link>
-      </li>
-      <li>
-        <Link href="/contact">Contact</Link>
-      </li>
+      {data.map((link: LinkType, i: number) => (
+        <li key={i}>
+          <Link href={link.url}>{link.Label}</Link>
+        </li>
+      ))}
     </>
   );
 };

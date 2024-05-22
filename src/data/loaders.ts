@@ -34,3 +34,11 @@ export async function getFooter() {
 
   return data;
 }
+
+export async function getNavbar() {
+  const url = baseUrl + "/api/navbar?populate=*";
+  const data = await fetchData(url);
+
+  return data;
+}
+

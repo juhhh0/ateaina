@@ -13,3 +13,12 @@ export type Expertise = {
     url: string;
   };
 };
+
+export type NavbarType = {
+  Links: LinkType[];
+}
+
+export type LinkType = {
+  url: string;
+  Label: string;
+};
