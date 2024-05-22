@@ -70,7 +70,7 @@ export default function Navbar({ data }: { data: NavbarType }) {
 
 const MobileMenu = ({ data }: { data: LinkType[] }) => {
   return (
-    <div className="fixed flex flex-col items-center justify-center w-screen left-0 top-0 h-screen backdrop-brightness-[0.1]">
+    <div className="fixed flex flex-col items-center justify-center w-screen left-0 top-0 h-screen dark-backdrop">
       <ul className="flex flex-col gap-4 items-center text-2xl uppercase font-bold">
         {renderLinks(data)}
       </ul>

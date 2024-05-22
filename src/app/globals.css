@@ -22,6 +22,11 @@ body {
   @apply max-w-7xl mx-auto;
 }
 
+.dark-backdrop{
+  @apply backdrop-brightness-[0.1];
+  -webkit-backdrop-filter: brightness(0.1);
+}
+
 .hero video::-webkit-media-controls-panel {
   display: none !important;
   opacity: 1 !important;
