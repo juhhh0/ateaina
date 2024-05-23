@@ -61,7 +61,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
           {data.Episodes &&
             data.Episodes.map((episode: LinkType, i: number) => (
               <li className="flex flex-col gap-2" key={i}>
-                <a href={episode.url}>{episode.Label}</a>
+                <a target="_blank" href={episode.url}>{episode.Label}</a>
               </li>
             ))}
         </ul>
