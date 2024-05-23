@@ -12,7 +12,7 @@ export default function Page() {
       <h2 className="pb-4">Conditions Générales d&apos;Utilisation</h2>
       <p className="font-medium">
         Ateaina publie le site ateaina.fr pour vous informer sur les différents
-        projets d'Ateaina. <br/> Les présentes CGU ou Conditions Générales
+        projets d&apos;Ateaina. <br/> Les présentes CGU ou Conditions Générales
         d&apos;Utilisation encadrent juridiquement l&apos;utilisation des
         services du site ateaina.fr (ci-après dénommé « le site »). L&apos;accès
         à cette plateforme signifie l&apos;acceptation des présentes CGU.
@@ -21,7 +21,7 @@ export default function Page() {
       <p className="font-medium">
         L&apos;édition du site ateaina.fr est assurée par la société Kido
         inscrite au RCS sous le numéro XXX XXX XXX, dont le siège social est
-        localisé au 25 rue de la tour d'auvergne, 93700, Drancy, France
+        localisé au 25 rue de la tour d&apos;auvergne, 93700, Drancy, France
         Métropolitaine. L&apos;hébergeur du site ateaina.fr est la société OVH,
         sise au X Rue XXXX, 00000 XXXXX, France.
       </p>
