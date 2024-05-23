@@ -36,7 +36,7 @@ export default function ContactForm() {
       </h3>
       <p>
         Envoyer nous un message depuis le formulaire suivant ou directement par
-        mail à l'adresse suivante:{" "}
+        mail à l&apos;adresse suivante:{" "}
         <a className="underline" href="mailto:contact@gmail.com">
           contact@ateaina.fr
         </a>
@@ -73,7 +73,7 @@ const succesMessage = () => {
     <>
       <h2>Message envoyé !</h2>
       <p>
-        On repondra dans les plus brefs délais, en attendant n'hésites pas à
+        On repondra dans les plus brefs délais, en attendant n&apos;hésites pas à
         nous rejoindre sur Instagram pour être au courant de nos actualités !
       </p>
     </>
@@ -85,7 +85,7 @@ const errorMessage = () => {
     <>
       <h2>Une erreur est survenue</h2>
       <p>
-        Pas de panique, on y travaille, en attendant n'hésites pas à nous
+        Pas de panique, on y travaille, en attendant n&apos;hésites pas à nous
         contacter directement par mail ou sur Instagram !
       </p>
     </>
