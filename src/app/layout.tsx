@@ -7,6 +7,12 @@ import { getNavbar } from "@/services/data/loaders";
 
 const mplus = M_PLUS_1({ subsets: ["latin"] });
 
+export const metadata: Metadata = {
+  icons: {
+    icon: '/custom.ico',
+  }
+};
+
 export default async function RootLayout({
   children,
 }: Readonly<{
