@@ -1,5 +1,5 @@
 import Slick from "@/components/SlickSlider";
-import { getWork } from "@/data/loaders";
+import { getWork } from "@/services/data/loaders";
 import { ExpertiseType, LinkType } from "@/lib/types";
 import { getStrapiURL } from "@/lib/utils";
 import React from "react";

@@ -1,6 +1,6 @@
 import React from "react";
 import WorkCard from "./WorkCard";
-import { getWorks } from "@/data/loaders";
+import { getWorks } from "@/services/data/loaders";
 import { getStrapiURL } from "@/lib/utils";
 import { WorkType } from "@/lib/types";
 

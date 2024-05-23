@@ -3,7 +3,7 @@ import { M_PLUS_1 } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { getNavbar } from "@/data/loaders";
+import { getNavbar } from "@/services/data/loaders";
 
 const mplus = M_PLUS_1({ subsets: ["latin"] });
 

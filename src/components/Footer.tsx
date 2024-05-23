@@ -1,4 +1,4 @@
-import { getFooter } from "@/data/loaders";
+import { getFooter } from "@/services/data/loaders";
 import { LinkType } from "@/lib/types";
 import Link from "next/link";
 import React from "react";
