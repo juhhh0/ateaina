@@ -3,6 +3,12 @@ import { getWorks } from "@/services/data/loaders";
 import { WorkType } from "@/lib/types";
 import { getStrapiURL } from "@/lib/utils";
 import React from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Ateaina - Works',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan accumsan mollis.',
+}
 
 export default async function page() {
 

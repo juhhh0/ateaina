@@ -1,5 +1,11 @@
 import TextEffect from "@/components/TextEffect";
+import { Metadata } from "next";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: 'Ateaina - Agency',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan accumsan mollis.',
+}
 
 export default function page() {
   return (

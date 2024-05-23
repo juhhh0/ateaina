@@ -3,6 +3,22 @@ import { getWork } from "@/services/data/loaders";
 import { ExpertiseType, LinkType } from "@/lib/types";
 import { getStrapiURL } from "@/lib/utils";
 import React from "react";
+import { Metadata } from "next";
+
+
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const slug = params.slug;
+
+  const data = await getWork(slug);
+
+  const title = "Ateaina - " + data.title;
+
+  return {
+    title: title,
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan accumsan mollis.',
+  };
+}
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const data = await getWork(params.slug);
