@@ -55,7 +55,7 @@ export default function Navbar({ data }: { data: NavbarType }) {
           {renderLinks(data.Links)}
         </ul>
         <span
-          className={`md:hidden z-20 uppercase font-medium`}
+          className={`md:hidden z-20 uppercase font-medium cursor-pointer`}
           onClick={() => {
             setOpen(!open);
           }}
