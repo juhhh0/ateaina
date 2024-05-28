@@ -8,10 +8,11 @@ export default function HeroVideo() {
         <Image src="/images/logo.svg" alt="Vercel Logo" layout="fill" priority />
       </div>
       <video
-        src="video.mp4"
+        src={require('../../public/video.mp4')}
         className="absolute w-screen h-screen object-cover brightness-[0.3]"
         autoPlay
         muted
+        playsInline
         loop
       ></video>
     </div>
