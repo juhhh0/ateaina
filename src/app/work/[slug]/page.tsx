@@ -55,17 +55,6 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <p>{data.description}</p>
       </section>
       <Slick data={data.pictures.data} />
-      <section className="max-width py-16 px-4 xl:px-0">
-        <p className="text-2xl">Regardez dès maintenant les épisodes:</p>
-        <ul className="pt-6 flex flex-col gap-4">
-          {data.Episodes &&
-            data.Episodes.map((episode: LinkType, i: number) => (
-              <li className="flex flex-col gap-2" key={i}>
-                <a target="_blank" href={episode.url}>{episode.Label}</a>
-              </li>
-            ))}
-        </ul>
-      </section>
       <div className="max-width flex gap-2 items-center justify-end py-16 px-4 xl:px-0">
         <span>Next Work</span>
         <img src="/icons/arrow.svg" alt="" />

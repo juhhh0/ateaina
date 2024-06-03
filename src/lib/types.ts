@@ -7,10 +7,6 @@ export type WorkType = {
       url: string;
     }[];
   };
-  Episodes: {
-    url: string;
-    Label: string;
-  }[];
   slug: string;
   cover: {
     url: string;
